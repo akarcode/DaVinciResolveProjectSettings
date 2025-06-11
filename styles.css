@@ -1,0 +1,364 @@
+/*
+  main layout
+*/
+
+::selection {
+  background: #444;
+  color: #f0f0f0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #28282e;
+  color: #929292;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.title-header {
+  background-color: #212126;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 36px);
+  overflow-x: hidden;
+}
+
+.content-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.settings-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  max-width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.navigation {
+  width: 220px;
+  min-width: 220px;
+  background-color: #28282e;
+}
+
+.navigation-item {
+  display: block;
+  padding: 8px 20px;
+  color: #929292;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navigation-item.active {
+  color: #fff;
+  background-color: #1a1a1a;
+}
+
+.parameter-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 5px;
+  box-sizing: border-box;
+}
+
+.parameter-title {
+  padding: 0 0 8px 5px;
+  color: #fff;
+}
+
+.parameter-davinci {
+  background-color: #28282e;
+  border: 1.5px solid #000;
+  border-radius: 4px;
+  margin-right: 0;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.parameter-davinci.gui {
+  flex: 2;
+}
+
+.parameter-davinci.script {
+  flex: 1;
+}
+
+/*
+  parameter items
+*/
+
+.mock-checkbox {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  margin-right: 6px;
+  background-color: #1f1f1f;
+  border: 1.5px solid #08080a;
+}
+
+.mock-checkbox.checked::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 4px;
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg);
+}
+
+.mock-checkbox.disabled {
+  background-color: #252529;
+  border-color: #1d1d21;
+}
+
+.mock-checkbox.checked.disabled::after {
+  border-color: #4f4f51;
+}
+
+.mock-checkbox.disabled + span {
+  color: #4f4f51;
+}
+
+.mock-input {
+  display: inline-flex;
+  align-items: center;
+  justify-content: left;
+  vertical-align: middle;
+  box-sizing: border-box;
+  min-width: 70px;
+  min-height: 24.667px;
+  margin: 0 5px;
+  padding: 3px 10px;
+  background-color: #1f1f1f;
+  color: #929292;
+  border: 1.5px solid #08080a;
+  border-radius: 2px;
+}
+
+.mock-input.left-align {
+  margin-left: 0;
+}
+
+.mock-input.width-full {
+  width: 100%;
+}
+
+.mock-input.width-half {
+  width: 50%;
+}
+
+.mock-select,
+select {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 200px;
+  min-height: 24.667px;
+  padding: 3px 10px;
+  margin-right: 4px;
+  background-color: #1f1f1f;
+  color: #929292;
+  border: 1.5px solid #08080a;
+  border-radius: 2px;
+}
+
+.mock-select {
+  padding-left: 14px;
+}
+
+.mock-select.width-half {
+  width: 50%;
+}
+
+.mock-select::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: 5px;
+  width: 5px;
+  height: 5px;
+  border: solid #929292;
+  border-width: 0 1.5px 1.5px 0;
+  transform: translateY(-50%) rotate(45deg);
+  pointer-events: none;
+}
+
+.mock-select.disabled {
+  background-color: #252529;
+  border-color: #1d1d21;
+  color: #4f4f51;
+}
+
+.mock-select.disabled::after {
+  border-color: #4f4f51;
+}
+
+.mock-radio {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  margin: 0 7px 4px 0;
+  background-color: #1f1f1f;
+  border: 1.5px solid #08080a;
+  border-radius: 50%;
+}
+
+.mock-radio.selected::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mock-radio.disabled {
+  background-color: #252529;
+  border-color: #1d1d21;
+}
+
+.mock-radio.disabled + span {
+  color: #525256;
+}
+
+.mock-radio.disabled::after {
+  border-color: #4f4f51;
+}
+
+/*
+  table properties
+*/
+
+table {
+  width: 100%;
+  margin: 0;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+th,
+td {
+  height: 33px;
+  padding: 0 12px;
+  text-align: left;
+  border: 0 solid #ddd;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+}
+
+/*
+  specific styling
+*/
+
+.text-nope-div {
+  height: 33px;
+  padding: 0 12px;
+  color: firebrick;
+  display: flex;
+  align-items: center;
+}
+
+.text-nope-table {
+  color: firebrick;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.select-spacing {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.select-spacing-right {
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+.align-vertical {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.one-tab {
+  margin-left: 25px !important;
+}
+
+.two-tab {
+  margin-left: 50px !important;
+}
+
+.two-tab-span {
+  margin-left: 52px !important;
+}
+
+.just-text {
+  padding: 4px 0;
+}
+
+.custom-size-three-lines {
+  height: 56px;
+}
+
+.spacer-footer {
+  height: 400px;
+}
+
+/*
+  scrollbar coloring
+*/
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #1a1a1a #28282e;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #28282e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #313137;
+}

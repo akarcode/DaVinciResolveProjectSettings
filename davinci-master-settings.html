@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="github" content="https://github.com/akarcode/" />
+    <meta name="repository" content="https://github.com/akarcode/DaVinciResolveProjectSettings/" />
+    <title>DaVinci Resolve v20 Project Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script src="dropdown-data-color.js"></script>
+    <script src="dropdown-data-main.js"></script>
+    <script src="dropdown-script.js"></script>
+  </head>
+  <body>
+    <div class="title-header">DaVinci Resolve v20 Project Settings - Sripting API References</div>
+    <div class="main-container">
+      <div class="navigation" id="navigation">
+        <script src="navigation.js"></script>
+      </div>
+      <div class="content-container">
+        <div class="settings-container">
+          <div class="parameter-title">Timeline Format</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Timeline resolution</label></td>
+                    <td><div class="mock-select disabled">1920 x 1080 HD</div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <span>For</span>
+                      <div class="mock-input">1920</div>
+                      <span>x</span>
+                      <div class="mock-input">1080</div>
+                      <span>processing</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox disabled"></div>
+                      <span>Use vertical resolution</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Pixel aspect ratio</label></td>
+                    <td colspan="2">
+                      <div class="mock-radio selected"></div>
+                      <span>Square</span><br />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-radio disabled"></div>
+                      <span>16:9 anamorphic</span><br />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-radio disabled"></div>
+                      <span>4:3 standard definition</span><br />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-radio"></div>
+                      <span>Cinemascope</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Timeline frame rate</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="timelineFrameRate-select-container"></div>
+                        <span>frames per second</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox disabled"></div>
+                      <span>Use drop frame timecode</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Enable interlace processing</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked disabled"></div>
+                      <span>Align Clips to Frame Boundaries</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Playback frame rate</label></td>
+                    <td colspan="2">
+                      <div class="mock-input left-align">23.976</div>
+                      <span>frames per second</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      timelineResolutionHeight string<br />
+                      timelineResolutionWidth string
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td>timelinePixelAspectRatio square</td>
+                  </tr>
+                  <tr>
+                    <td>timelinePixelAspectRatio 16_9</td>
+                  </tr>
+                  <tr>
+                    <td>timelinePixelAspectRatio 4_3</td>
+                  </tr>
+                  <tr>
+                    <td>timelinePixelAspectRatio cinemascope</td>
+                  </tr>
+                  <tr>
+                    <td><div id="timelineFrameRate-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td>timelineDropFrameTimecode bool</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      timelineInterlaceProcessing bool<br />
+                      imageEnableFieldProcessing bool
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td>timelinePlaybackFrameRate string</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-container">
+          <div class="parameter-title">Video Monitoring</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Video Resolution</label></td>
+                    <td><div id="videoMonitorFormat-select-container"></div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Format</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="timelinePlaybackFrameRate-select-container"></div>
+                        <span>frames per second</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>Use 1080PsF</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Use 4:4:4 SDI</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Use Level A for 3Gb SDI</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Use dual outputs on SDI</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>SDI configuration</label></td>
+                    <td colspan="2">
+                      <div class="mock-radio selected"></div>
+                      <span>Single Link</span><br />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-radio disabled"></div>
+                      <span>Dual Link</span><br />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-radio disabled"></div>
+                      <span>Quad Link</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Data Levels</label></td>
+                    <td colspan="2">
+                      <div class="mock-radio selected"></div>
+                      <span>Video</span><br />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Data Levels</label></td>
+                    <td colspan="2">
+                      <div class="mock-radio disabled"></div>
+                      <span>Full</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Retain sub-black and super-white data</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Video bit depth</label></td>
+                    <td><div id="videoMonitorBitDepth-select-container"></div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Monitor scaling</label></td>
+                    <td><div id="videoMonitorScaling-select-container"></div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div class="mock-checkbox"></div>
+                        <span>Use</span>
+                        <div id="videoMonitorMatrixOverrideFor422SDI-select-container" class="margin-left"></div>
+                        <span>matrix for 4:2:2 SDI output</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Enable HDR metadata</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td><div id="videoMonitorFormat-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div id="timelinePlaybackFrameRate-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td>videoMonitorFormat bool</td>
+                  </tr>
+                  <tr>
+                    <td>videoMonitorUse444SDI bool</td>
+                  </tr>
+                  <tr>
+                    <td>videoMonitorUseLevelA bool</td>
+                  </tr>
+                  <tr>
+                    <td>videoMonitorUseStereoSDI bool</td>
+                  </tr>
+                  <tr>
+                    <td>videoMonitorSDIConfiguration single_link</td>
+                  </tr>
+                  <tr>
+                    <td>videoMonitorSDIConfiguration dual_link</td>
+                  </tr>
+                  <tr>
+                    <td>videoMonitorSDIConfiguration quad_link</td>
+                  </tr>
+                  <tr>
+                    <td>videoDataLevels Video</td>
+                  </tr>
+                  <tr>
+                    <td>videoDataLevels Full</td>
+                  </tr>
+                  <tr>
+                    <td>videoDataLevelsRetainSubblockAndSuperWhiteData bool</td>
+                  </tr>
+                  <tr>
+                    <td><div id="videoMonitorBitDepth-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div id="videoMonitorScaling-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      videoMonitorUseMatrixOverrideFor422SDI bool<br />
+                      <div id="videoMonitorMatrixOverrideFor422SDI-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>videoMonitorUseHDROverHDMI bool</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">Optimized Media and Render Cache</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Proxy media resolution</label></td>
+                    <td><div class="mock-select disabled">Choose automatically</div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Proxy media format</label></td>
+                    <td><div class="mock-select disabled">H.264</div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Optimized media resolution</label></td>
+                    <td><div id="perfOptimizedResolutionRatio-select-container"></div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Optimized media format</label></td>
+                    <td><div id="perfOptimisedCodec-select-container"></div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Render cache format</label></td>
+                    <td><div id="perfRenderCacheCodec-select-container"></div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>Enable background caching after</span>
+                      <div class="mock-input">5</div>
+                      <span>seconds</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Automatically cache transitions in user mode</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Automatically cache composites in user mode</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>Automatically cache Fusion effects in user mode</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div id="perfOptimizedResolutionRatio-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div id="perfOptimisedCodec-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div id="perfRenderCacheCodec-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      perfAutoRenderCacheEnable bool<br />
+                      perfAutoRenderCacheAfterTime bool
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>perfAutoRenderCacheTransition bool</td>
+                  </tr>
+                  <tr>
+                    <td>perfAutoRenderCacheComposite bool</td>
+                  </tr>
+                  <tr>
+                    <td>perfAutoRenderCacheFuEffect bool</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">Working Folders</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Project media location</label></td>
+                    <td colspan="2">
+                      <div class="mock-input width-full">C:\Users\you\DaVinci Resolve Media</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Proxy generation location</label></td>
+                    <td colspan="2">
+                      <div class="mock-input width-full">C:\Users\you\Videos\ProxyMedia</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Cache files location</label></td>
+                    <td colspan="2">
+                      <div class="mock-input width-full">C:\Users\you\Videos\CacheClip</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Gallery stills location</label></td>
+                    <td colspan="2">
+                      <div class="mock-input width-full">C:\Users\you\Videos\.gallery</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>projectMediaLocation string</td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td>perfCacheClipsLocation string</td>
+                  </tr>
+                  <tr>
+                    <td>colorGalleryStillsLocation string</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">Frame Interpolation</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Retime process</label></td>
+                    <td><div id="imageRetimeInterpolation-select-container"></div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Motion range</label></td>
+                    <td><div id="imageMotionEstimationMode-select-container"></div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Standard Faster</label></td>
+                    <td><div id="imageMotionEstimationRange-select-container"></div></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td><div id="imageRetimeInterpolation-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div id="imageMotionEstimationMode-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div id="imageMotionEstimationRange-value-container"></div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="spacer-footer"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

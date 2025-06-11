@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="github" content="https://github.com/akarcode/" />
+    <meta name="repository" content="https://github.com/akarcode/DaVinciResolveProjectSettings/" />
+    <title>DaVinci Resolve v20 Project Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script src="dropdown-data-color.js"></script>
+    <script src="dropdown-data-main.js"></script>
+    <script src="dropdown-script.js"></script>
+  </head>
+  <body>
+    <div class="title-header">DaVinci Resolve v20 Project Settings - Sripting API References</div>
+    <div class="main-container">
+      <div class="navigation" id="navigation">
+        <script src="navigation.js"></script>
+      </div>
+      <div class="content-container">
+        <div class="settings-container">
+          <div class="parameter-title">Subtitles Setup</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Max characters per line</label></td>
+                    <td colspan="2">
+                      <div class="mock-input left-align">60</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Minimum caption duration</label></td>
+                    <td colspan="2">
+                      <div class="mock-input left-align">3</div>
+                      <span>secs</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Maximum characters per second</label></td>
+                    <td colspan="2">
+                      <div class="mock-input left-align">30</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>limitSubtitleCPL string</td>
+                  </tr>
+                  <tr>
+                    <td>limitSubtitleCaptionDurationSec string</td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">Transcription Setup</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Language</label></td>
+                    <td colspan="2">
+                      <div id="transcriptionLanguage-select-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Enable Extended Language Support (beta)</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div id="transcriptionLanguage-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="spacer-footer"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

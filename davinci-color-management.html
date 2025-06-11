@@ -1,0 +1,1047 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="github" content="https://github.com/akarcode/" />
+    <meta name="repository" content="https://github.com/akarcode/DaVinciResolveProjectSettings/" />
+    <title>DaVinci Resolve v20 Project Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script src="dropdown-data-color.js"></script>
+    <script src="dropdown-data-main.js"></script>
+    <script src="dropdown-script.js"></script>
+  </head>
+  <body>
+    <div class="title-header">DaVinci Resolve v20 Project Settings - Sripting API References</div>
+    <div class="main-container">
+      <div class="navigation" id="navigation">
+        <script src="navigation.js"></script>
+      </div>
+      <div class="content-container">
+        <div class="settings-container">
+          <div class="parameter-title">Color Space &amp; Transforms</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Color science</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="colorScienceMode-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>Use separate color space and gamma</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Timeline color space</label></td>
+                    <td><div id="colorSpaceTimeline-select-container"></div></td>
+                    <td><div id="colorSpaceTimelineGamma-select-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Output color space</label></td>
+                    <td><div id="colorSpaceOutput-select-container"></div></td>
+                    <td><div id="colorSpaceOutputGamma-select-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>HDR mastering is for</span>
+                      <div class="mock-input">1000</div>
+                      <span>nits</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td><div id="colorScienceMode-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td>separateColorSpaceAndGamma bool</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorSpaceTimeline-value-container"></div>
+                      <div id="colorSpaceTimelineGamma-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorSpaceOutput-value-container"></div>
+                      <div id="colorSpaceOutputGamma-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      hdrMasteringOn bool<br />
+                      hdrMasteringLuminanceMax string
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-container">
+          <div class="parameter-title">Color Space &amp; Transforms (Not Separated)</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Output color space</label></td>
+                    <td colspan="2">
+                      <div id="colorSpaceOutput_notSeparated-select-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Timeline color space</label></td>
+                    <td colspan="2">
+                      <div id="colorSpaceTimeline_notSeparated-select-container"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div id="colorSpaceOutput_notSeparated-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorSpaceTimeline_notSeparated-value-container"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-container">
+          <div class="parameter-title">Color Space &amp; Transforms (Color Managed Automatic)</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Color science</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="colorScienceMode_auto-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>Automatic color management</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Color processing mode</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="rcmPresetMode_auto-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <div class="just-text">
+                        SDR grading environment, best used when the<br />
+                        majority of source material is SDR. Suitable for<br />
+                        SDR and HDR deliverables.
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Output color space</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="colorSpaceOutput_auto-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>HDR mastering is for</span>
+                      <div class="mock-input">1000</div>
+                      <span>nits</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td><div id="colorScienceMode_auto-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td>isAutoColorManage bool</td>
+                  </tr>
+                  <tr>
+                    <td><div id="rcmPresetMode_auto-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="custom-size-three-lines"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div id="colorSpaceOutput_auto-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      hdrMasteringOn bool<br />
+                      hdrMasteringLuminanceMax string
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">Color Space &amp; Transforms (Color Managed Manual)</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Color science</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="colorScienceMode_manual-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Automatic color management</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Color processing mode</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="rcmPresetMode_manual-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <div class="just-text">
+                        Rec.709 grading environment, suitable for SDR<br />
+                        and HDR deliverables. Good for conventional<br />
+                        streaming and broadcast.
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>Use separate color space and gamma</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Output color space</label></td>
+                    <td><div id="colorSpaceOutput_manual_separated-select-container"></div></td>
+                    <td><div id="colorSpaceOutputGamma_manual_separated-select-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>HDR mastering is for</span>
+                      <div class="mock-input">1000</div>
+                      <span>nits</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td><div id="colorScienceMode_manual-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td>isAutoColorManage bool</td>
+                  </tr>
+                  <tr>
+                    <td><div id="rcmPresetMode_manual-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="custom-size-three-lines"></div></td>
+                  </tr>
+                  <tr>
+                    <td>separateColorSpaceAndGamma bool</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorSpaceOutput_manual_separated-value-container"></div>
+                      <div id="colorSpaceOutputGamma_manual_separated-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      hdrMasteringOn bool<br />
+                      hdrMasteringLuminanceMax string
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">Color Space &amp; Transforms (Color Managed Custom)</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Color science</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="colorScienceMode_custom-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Automatic color management</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Color processing mode</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="rcmPresetMode_custom-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>Use separate color space and gamma</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Input color space</label></td>
+                    <td><div id="colorSpaceInput_custom-select-container"></div></td>
+                    <td><div id="colorSpaceInputGamma_custom-select-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Timeline color space</label></td>
+                    <td><div id="colorSpaceTimeline_custom-select-container"></div></td>
+                    <td><div id="colorSpaceTimelineGamma_custom-select-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Timeline working luminance</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="timelineWorkingLuminanceMode-select-container"></div>
+                        <div class="mock-input">1000</div>
+                        <span>nits</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Output color space</label></td>
+                    <td><div id="colorSpaceOutput_custom-select-container"></div></td>
+                    <td><div id="colorSpaceOutputGamma_custom-select-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox disabled"></div>
+                      <span>Use 203 nits reference for Rec.2100 HDR</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Limit output gamut to</label></td>
+                    <td><div class="mock-select disabled">Output color space</div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Input DRT</label></td>
+                    <td><div id="inputDRT-select-container"></div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Sat. rolloff start</label></td>
+                    <td colspan="2">
+                      <div class="mock-input left-align">100</div>
+                      <span>nits</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Sat. rolloff limit</label></td>
+                    <td colspan="2">
+                      <div class="mock-input left-align">1000</div>
+                      <span>nits</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Output DRT</label></td>
+                    <td><div id="outputDRT-select-container"></div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Sat. rolloff start</label></td>
+                    <td colspan="2">
+                      <div class="mock-input left-align">100</div>
+                      <span>nits</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Sat. rolloff limit</label></td>
+                    <td colspan="2">
+                      <div class="mock-input left-align">1000</div>
+                      <span>nits</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>Use inverse DRT for SDR to HDR conversion</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>Use white point adaptation</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>Use color space aware grading tools</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Apply resize transformations in</label></td>
+                    <td><div id="imageResizingGamma-select-container"></div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Disable tone mapping for Fusion conversions</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Graphics white level</label></td>
+                    <td colspan="2">
+                      <div class="mock-input left-align">100</div>
+                      <span>nits</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>HDR mastering is for</span>
+                      <div class="mock-input">1000</div>
+                      <span>nits</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td><div id="colorScienceMode_custom-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td>isAutoColorManage bool</td>
+                  </tr>
+                  <tr>
+                    <td><div id="rcmPresetMode_custom-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td>separateColorSpaceAndGamma bool</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorSpaceInput_custom-value-container"></div>
+                      <div id="colorSpaceInputGamma_custom-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorSpaceTimeline_custom-value-container"></div>
+                      <div id="colorSpaceTimelineGamma_custom-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="timelineWorkingLuminanceMode-value-container"></div>
+                      timelineWorkingLuminance string
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorSpaceOutput_custom-value-container"></div>
+                      <div id="colorSpaceOutputGamma_custom-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="inputDRT-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>inputDRTSatRolloffStart string</td>
+                  </tr>
+                  <tr>
+                    <td>inputDRTSatRolloffLimit string</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="outputDRT-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>outputDRTSatRolloffStart string</td>
+                  </tr>
+                  <tr>
+                    <td>outputDRTSatRolloffLimit string</td>
+                  </tr>
+                  <tr>
+                    <td>useInverseDRT bool</td>
+                  </tr>
+                  <tr>
+                    <td>useCATransform bool</td>
+                  </tr>
+                  <tr>
+                    <td>useColorSpaceAwareGradingTools bool</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="imageResizingGamma-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>disableFusionToneMapping bool</td>
+                  </tr>
+                  <tr>
+                    <td>graphicsWhiteLevel string</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      hdrMasteringOn bool<br />
+                      hdrMasteringLuminanceMax string
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-container">
+          <div class="parameter-title">Color Space &amp; Transforms (Manual/Custom Not Separated)</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Input color space</label></td>
+                    <td colspan="2">
+                      <div id="colorSpaceInput_custom_notSeparated-select-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Timeline color space</label></td>
+                    <td colspan="2">
+                      <div id="colorSpaceTimeline_custom_notSeparated-select-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Output color space</label></td>
+                    <td colspan="2">
+                      <div id="colorSpaceOutput_custom_notSeparated-select-container"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td><div id="colorSpaceInput_custom_notSeparated-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorSpaceTimeline_custom_notSeparated-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorSpaceOutput_custom_notSeparated-value-container"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-container">
+          <div class="parameter-title">Color Space &amp; Transforms (ACEScc)</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Color science</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="colorScienceMode_aces-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>ACES version</label></td>
+                    <td><div class="mock-select disabled">ACES 2.0</div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>ACES AMF</label></td>
+                    <td><div class="mock-select disabled">None</div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>ACES Input Transform</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="colorAcesIDT-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>Apply ACES reference gamut compress</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>ACES Output Transform</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="colorAcesODT-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Process node LUTS in</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="colorAcesNodeLUTProcessingSpace-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Use color space aware grading tools</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Apply resize transformations in</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="disableFusionToneMapping-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Disable tone mapping for Fusion conversions</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Graphics white level</label></td>
+                    <td colspan="2">
+                      <div class="mock-input left-align">100</div>
+                      <span>nits</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>HDR mastering is for</span>
+                      <div class="mock-input">1000</div>
+                      <span>nits</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox disabled"></div>
+                      <span>Use 65 points LUT for AMF exporting</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div id="colorScienceMode_aces-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorAcesIDT-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>colorAcesGamutCompressType bool</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorAcesODT-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorAcesNodeLUTProcessingSpace-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>imageResizingGamma bool</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="disableFusionToneMapping-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>disableFusionToneMapping bool</td>
+                  </tr>
+                  <tr>
+                    <td>graphicsWhiteLevel string</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      hdrMasteringOn bool<br />
+                      hdrMasteringLuminanceMax string
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">
+            Color Space &amp; Transforms <span class="text-nope-table">(DaVinci Resolve v14 Deprecated!)</span>
+          </div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Timeline to Output Tone Mapping</label></td>
+                    <td><div class="mock-select disabled">None</div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Max. Timeline Luminance</label></td>
+                    <td colspan="2">
+                      <div class="mock-input left-align">100</div>
+                      <span>nits</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Timeline to Output Gamut Mapping</label></td>
+                    <td><div class="mock-select disabled">None</div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Saturation Knee</label></td>
+                    <td colspan="2">
+                      <div class="mock-input left-align">0.900</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Saturation Max</label></td>
+                    <td colspan="2">
+                      <div class="mock-input left-align">1.000</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td><span class="text-nope-table">colorSpaceOutputToneMapping</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="text-nope-table">colorSpaceOutputToneLuminanceMax</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="text-nope-table">colorSpaceOutputGamutMapping</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="text-nope-table">colorSpaceOutputGamutSaturationKnee</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="text-nope-table">colorSpaceOutputGamutSaturationMax</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">Dolby Vision®</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>Enable Dolby Vision</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Dolby Vision version</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="hdrDolbyVersion-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Analysis tuning</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="hdrDolbyAnalysisTuning-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Mastering display</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="hdrDolbyMasterDisplay-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox disabled"></div>
+                      <span>Use external CMU</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox disabled"></div>
+                      <span>Enable Dolby Vision HDMI tunneling</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox disabled"></div>
+                      <span>Enable L5 metadata on HDMI</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>hdrDolbyControlsOn bool</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="hdrDolbyVersion-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="hdrDolbyAnalysisTuning-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="hdrDolbyMasterDisplay-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">HDR10+</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>Enable HDR10+</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>hdr10PlusControlsOn bool</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">HDR Vivid</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui"></div>
+            <div class="parameter-davinci script">
+              <div class="text-nope-div">nope</div>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">Lookup Tables</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui"></div>
+            <div class="parameter-davinci script">
+              <div class="text-nope-div">nope</div>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">Broadcast Safe</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Broadcast safe IRE levels</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="limitBroadcastSafeLevels-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Make broadcast safe</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div id="limitBroadcastSafeLevels-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>limitBroadcastSafeOn bool</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="spacer-footer"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="github" content="https://github.com/akarcode/" />
+    <meta name="repository" content="https://github.com/akarcode/DaVinciResolveProjectSettings/" />
+    <title>DaVinci Resolve v20 Project Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script src="dropdown-data-color.js"></script>
+    <script src="dropdown-data-main.js"></script>
+    <script src="dropdown-script.js"></script>
+  </head>
+  <body>
+    <div class="title-header">DaVinci Resolve v20 Project Settings - Sripting API References</div>
+    <div class="main-container">
+      <div class="navigation" id="navigation">
+        <script src="navigation.js"></script>
+      </div>
+      <div class="content-container">
+        <div class="settings-container">
+          <div class="parameter-title">Image Scaling</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Resize filter</label></td>
+                    <td>
+                      <div class="align-vertical">
+                        <div id="imageResizeMode_one-select-container"></div>
+                      </div>
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Method</label></td>
+                    <td>
+                      <div class="align-vertical">
+                        <div id="imageResizeMode_two-select-container"></div>
+                      </div>
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Override input scaling</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <div class="align-vertical">
+                        <div id="timelineInputResMismatchCustomPreset-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Override output scaling</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <div class="align-vertical">
+                        <div id="timelineOutputResMismatchCustomPreset-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Deinterlace quality</label></td>
+                    <td>
+                      <div class="align-vertical">
+                        <div id="imageDeinterlaceQuality-select-container"></div>
+                      </div>
+                    </td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td><div id="imageResizeMode_one-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div id="imageResizeMode_two-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td>timelineInputResMismatchUseCustomPreset bool</td>
+                  </tr>
+                  <tr>
+                    <td><div id="timelineInputResMismatchCustomPreset-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td>timelineOutputResMismatchUseCustomPreset bool</td>
+                  </tr>
+                  <tr>
+                    <td><div id="timelineOutputResMismatchCustomPreset-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div id="imageDeinterlaceQuality-value-container"></div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">Input Scaling</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Mismatched resolution files</label></td>
+                    <td>
+                      <div class="align-vertical">
+                        <div id="timelineInputResMismatchBehavior-select-container"></div>
+                      </div>
+                    </td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td><div id="timelineInputResMismatchBehavior-value-container"></div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">Output Scaling</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Match timeline settings</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Output resolution</label></td>
+                    <td><div class="mock-select disabled">1920 x 1080 HD</div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <span>For</span>
+                      <div class="mock-input">1920</div>
+                      <span>x</span>
+                      <div class="mock-input">1080</div>
+                      <span>processing</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Pixel aspect ratio</label></td>
+                    <td colspan="2">
+                      <div class="mock-radio selected"></div>
+                      <span>Square</span><br />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-radio disabled"></div>
+                      <span>16:9 anamorphic</span><br />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-radio disabled"></div>
+                      <span>4:3 standard definition</span><br />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-radio"></div>
+                      <span>Cinemascope</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Mismatched resolution files</label></td>
+                    <td>
+                      <div class="align-vertical">
+                        <div id="timelineOutputResMismatchBehavior-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Super Scale</label></td>
+                    <td>
+                      <div class="align-vertical">
+                        <div id="superScale-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Sharpness</label></td>
+                    <td>
+                      <div class="align-vertical">
+                        <div id="superScaleSharpness-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Noise Reduction</label></td>
+                    <td>
+                      <div class="align-vertical">
+                        <div id="superScaleNoiseReduction-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>timelineOutputResMatchTimelineRes bool</td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      timelineOutputResolutionHeight string<br />
+                      timelineOutputResolutionWidth string
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>timelineOutputPixelAspectRatio square</td>
+                  </tr>
+                  <tr>
+                    <td>timelineOutputPixelAspectRatio 16_9</td>
+                  </tr>
+                  <tr>
+                    <td>timelineOutputPixelAspectRatio 4_3</td>
+                  </tr>
+                  <tr>
+                    <td>timelineOutputPixelAspectRatio cinemascope</td>
+                  </tr>
+                  <tr>
+                    <td><div id="timelineOutputResMismatchBehavior-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div id="superScale-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div id="superScaleSharpness-value-container"></div></td>
+                  </tr>
+                  <tr>
+                    <td><div id="superScaleNoiseReduction-value-container"></div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">Output Scaling (Additional)</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Sharpness</label></td>
+                    <td><div class="mock-input left-align">0.500</div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Noise Reduction</label></td>
+                    <td><div class="mock-input left-align">0.500</div></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>superScaleSharpnessStrength string</td>
+                  </tr>
+                  <tr>
+                    <td>superScaleNoiseReductionStrength string</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="spacer-footer"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

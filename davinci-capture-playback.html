@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="github" content="https://github.com/akarcode/" />
+    <meta name="repository" content="https://github.com/akarcode/DaVinciResolveProjectSettings/" />
+    <title>DaVinci Resolve v20 Project Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script src="dropdown-data-color.js"></script>
+    <script src="dropdown-data-main.js"></script>
+    <script src="dropdown-script.js"></script>
+  </head>
+  <body>
+    <div class="title-header">DaVinci Resolve v20 Project Settings - Sripting API References</div>
+    <div class="main-container">
+      <div class="navigation" id="navigation">
+        <script src="navigation.js"></script>
+      </div>
+      <div class="content-container">
+        <div class="settings-container">
+          <div class="parameter-title">Video Monitoring</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Video capture and playback</label></td>
+                    <td colspan="2">
+                      <div id="videoDeckFormat-select-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Use left and right eye SDI</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Video connection operates as</label></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Use SDI</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>SDI configuration</label></td>
+                    <td colspan="2">
+                      <div class="mock-radio selected"></div>
+                      <span>Single Link</span><br />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-radio disabled"></div>
+                      <span>Dual Link</span><br />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-radio disabled"></div>
+                      <span>Quad Link</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Data Levels</label></td>
+                    <td colspan="2">
+                      <div class="mock-radio selected"></div>
+                      <span>Video</span><br />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-radio disabled"></div>
+                      <span>Full</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Video bit depth</label></td>
+                    <td colspan="2">
+                      <div id="videoDeckBitDepth-select-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>Use deck autoedit</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Non auto edit timing</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="videoDeckNonAutoEditFrames-select-container"></div>
+                        <span>frames</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Deck preroll</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="videoDeckPrerollSec-select-container"></div>
+                        <span>seconds</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Video output sync source</label></td>
+                    <td colspan="2">
+                      <div id="videoDeckOutputSyncSource-select-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Add 3:2 pulldown</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div id="videoDeckFormat-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>videoDeckUseStereoSDI bool</td>
+                  </tr>
+                  <tr>
+                    <td>videoDeckUse444SDI bool</td>
+                  </tr>
+                  <tr>
+                    <td>videoDeckSDIConfiguration single_link</td>
+                  </tr>
+                  <tr>
+                    <td>videoDeckSDIConfiguration dual_link</td>
+                  </tr>
+                  <tr>
+                    <td>videoDeckSDIConfiguration quad_link</td>
+                  </tr>
+                  <tr>
+                    <td>videoDataLevels Video</td>
+                  </tr>
+                  <tr>
+                    <td>videoDataLevels Full</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="videoDeckBitDepth-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>videoDeckUseAudoEdit bool</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="videoDeckNonAutoEditFrames-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="videoDeckPrerollSec-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="videoDeckOutputSyncSource-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>videoDeckAdd32Pulldown bool</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">Capture</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Capture</label></td>
+                    <td colspan="2">
+                      <div id="videoCaptureMode-select-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Video format</label></td>
+                    <td colspan="2">
+                      <div id="videoCaptureFormat-select-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Codec</label></td>
+                    <td colspan="2">
+                      <div id="videoCaptureCodec-select-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Save in folder path</label></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>Program name</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Clip number</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Reel number</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Roll/Card</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Apply reel number to</label></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>File name</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Header</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Use prefix</label></td>
+                    <td colspan="2"><div class="mock-input left-align"></div></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Apply prefix to</label></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>File name</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Folder</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Use frame number with</label></td>
+                    <td colspan="2">
+                      <div class="mock-select disabled">8</div>
+                      <span>digits</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Set batch ingest handles to</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="videoCaptureIngestHandles-select-container"></div>
+                        <span>frames</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Input</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="audioCaptureNumChannels-select-container"></div>
+                        <span>channels of audio</span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div id="videoCaptureMode-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="videoCaptureFormat-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="videoCaptureCodec-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="videoCaptureIngestHandles-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="audioCaptureNumChannels-value-container"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">Playout</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Output</label></td>
+                    <td colspan="2">
+                      <div id="videoPlayoutMode-select-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Output source timecode</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Output LTC</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Delay LTC by</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="videoPlayoutLTCFramesOffset-select-container"></div>
+                        <span>frames</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Offset audio by</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="videoPlayoutAudioFramesOffset-select-container"></div>
+                        <span>frames</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Output</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="audioPlayoutNumChannels-select-container"></div>
+                        <span>channels of audio</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Set batch playout head handle to</label></td>
+
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="videoPlayoutBatchHeadDuration-select-container"></div>
+                        <span>seconds</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Set batch playout tail handle to</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="videoPlayoutBatchTailDuration-select-container"></div>
+                        <span>seconds</span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div id="videoPlayoutMode-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>videoPlayoutShowSourceTimecode bool</td>
+                  </tr>
+                  <tr>
+                    <td>videoPlayoutShowLTC bool</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="videoPlayoutLTCFramesOffset-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="videoPlayoutAudioFramesOffset-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="audioPlayoutNumChannels-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="videoPlayoutBatchHeadDuration-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="videoPlayoutBatchTailDuration-value-container"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="spacer-footer"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

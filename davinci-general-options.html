@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="github" content="https://github.com/akarcode/" />
+    <meta name="repository" content="https://github.com/akarcode/DaVinciResolveProjectSettings/" />
+    <title>DaVinci Resolve v20 Project Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script src="dropdown-data-color.js"></script>
+    <script src="dropdown-data-main.js"></script>
+    <script src="dropdown-script.js"></script>
+  </head>
+  <body>
+    <div class="title-header">DaVinci Resolve v20 Project Settings - Sripting API References</div>
+    <div class="main-container">
+      <div class="navigation" id="navigation">
+        <script src="navigation.js"></script>
+      </div>
+      <div class="content-container">
+        <div class="settings-container">
+          <div class="parameter-title">Conform Options</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Use timecode</label></td>
+                    <td colspan="2">
+                      <div class="mock-radio selected"></div>
+                      <span>Embedded in the source clip</span><br />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-radio"></div>
+                      <span>From the source clip frame count</span><br />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Conform partial clips with black gaps</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>Automatically conform missing clips added to media pool</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>Assist using reel names from the:</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-radio selected one-tab"></div>
+                      <span>Source clip file pathname</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <span class="two-tab-span">Pattern</span>
+                      <div class="mock-input disabled">*/%R/%D</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-radio one-tab"></div>
+                      <span>Mediapool folder name</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-radio one-tab"></div>
+                      <span>Embedding in source clip file</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-radio one-tab"></div>
+                      <span>Source clip filename</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Limit reel name matching to</span>
+                      <div class="mock-input">8</div>
+                      <span>characters</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Ignore the first</span>
+                      <div class="mock-input">1</div>
+                      <span>characters of the reel name</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Extract reel names from EDL comments</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>Sort timeline using reel name and timecode</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="align-right"><label>Mixed frame rate format</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="timelineFrameRateMismatchBehavior-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="timelineFrameRateMismatchBehavior-value-container"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">Color</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>Automatically label gallery stills using:</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="colorGalleryStillsNamingPattern-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2"><div class="mock-input one-tab width-half">Custom</div></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked one-tab"></div>
+                      <span>Append still number on export:</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-radio selected two-tab"></div>
+                      <span>As Suffix</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-radio disabled two-tab"></div>
+                      <span>As Prefix</span><br />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Luminance mixer defaults to zero</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Use legacy Log grading ranges and curve</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>Use S-curve for contrast</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox disabled"></div>
+                      <span>Use legacy sizing interactions for windows and effects</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Apply stereoscopic convergence to windows and effects</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox checked"></div>
+                      <span>Use local version for new clips in timeline</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox disabled"></div>
+                      <span>Automatically match master timeline with media pool</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Save timeline thumbnails with project</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Use BGR pixel order for DPX v2</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Embed timecode in audio output</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox disabled"></div>
+                      <span>Use timelines bin</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Node Stack Layers</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="nodeStackLayers-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Layer 1</label></td>
+                    <td><div class="mock-input left-align">L1</div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Layer 2</label></td>
+                    <td><div class="mock-input left-align">L2</div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Post Group Node Stack Layer</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>colorGalleryStillsNamingEnabled bool</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorGalleryStillsNamingPattern-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>colorGalleryStillsNamingCustomPattern string</td>
+                  </tr>
+                  <tr>
+                    <td>colorGalleryStillsNamingWithStillNumber bool</td>
+                  </tr>
+                  <tr>
+                    <td>colorGalleryStillsNamingWithStillNumber suffix</td>
+                  </tr>
+                  <tr>
+                    <td>colorGalleryStillsNamingWithStillNumber prefix</td>
+                  </tr>
+                  <tr>
+                    <td>colorLuminanceMixerDefaultZero bool</td>
+                  </tr>
+                  <tr>
+                    <td>colorUseLegacyLogGrades bool</td>
+                  </tr>
+                  <tr>
+                    <td>colorUseContrastSCurve bool</td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td>colorUseStereoConvergenceForEffects bool</td>
+                  </tr>
+                  <tr>
+                    <td>colorUseLocalVersionsAsDefault bool</td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td>timelineSaveThumbsInProject bool</td>
+                  </tr>
+                  <tr>
+                    <td>colorUseBGRPixelOrderForDPX bool</td>
+                  </tr>
+                  <tr>
+                    <td>audioOutputHasTimecode bool</td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="nodeStackLayers-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">Dynamics Profile</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Dynamic profile start</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="colorKeyframeDynamicsStartProfile-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Dynamic profile end</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="colorKeyframeDynamicsEndProfile-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div id="colorKeyframeDynamicsStartProfile-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorKeyframeDynamicsEndProfile-value-container"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">Versions</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>1</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="colorVersion1Name-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>2</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="colorVersion2Name-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>3</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="colorVersion3Name-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>4</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="colorVersion4Name-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>5</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="colorVersion5Name-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>6</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="colorVersion6Name-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>7</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="colorVersion7Name-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>8</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="colorVersion8Name-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>9</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="colorVersion9Name-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>10</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="colorVersion10Name-select-container"></div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div id="colorVersion1Name-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorVersion2Name-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorVersion3Name-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorVersion4Name-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorVersion5Name-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorVersion6Name-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorVersion7Name-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorVersion8Name-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorVersion9Name-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="colorVersion10Name-value-container"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="spacer-footer"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

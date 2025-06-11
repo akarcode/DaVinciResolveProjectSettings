@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="github" content="https://github.com/akarcode/" />
+    <meta name="repository" content="https://github.com/akarcode/DaVinciResolveProjectSettings/" />
+    <title>DaVinci Resolve v20 Project Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script src="dropdown-data-color.js"></script>
+    <script src="dropdown-data-main.js"></script>
+    <script src="dropdown-script.js"></script>
+  </head>
+  <body>
+    <div class="title-header">DaVinci Resolve v20 Project Settings - Sripting API References</div>
+    <div class="main-container">
+      <div class="navigation" id="navigation">
+        <script src="navigation.js"></script>
+      </div>
+      <div class="content-container">
+        <div class="settings-container">
+          <div class="parameter-title">Timeline Sample Rate</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui"></div>
+            <div class="parameter-davinci script">
+              <div class="text-nope-div">nope</div>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">Bussing</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui"></div>
+            <div class="parameter-davinci script">
+              <div class="text-nope-div">nope</div>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">Audio Metering</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Meter Type</label></td>
+                    <td><div class="mock-select disabled">Digital VU</div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Level detector</label></td>
+                    <td><div class="mock-select disabled">VU</div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Scale</label></td>
+                    <td><div class="mock-select disabled">Quasi Linear</div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Decay</label></td>
+                    <td colspan="2">
+                      <div class="mock-input left-align">0.3</div>
+                      <span>Seconds / 20dB</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Peak Indicator</label></td>
+                    <td><div class="mock-select disabled">Short hold + fall</div></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Pre fader metering on tracks</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Target loudness level</label></td>
+
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="limitAudioMeterLUFS-select-container"></div>
+                        <span>LUFS</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Loudness scale</label></td>
+                    <td colspan="2">
+                      <div id="limitAudioMeterLoudnessScale-select-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Bus meter alignment level</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="limitAudioMeterAlignLevel-select-container"></div>
+                        <span>dBFS</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Bus meter high level</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="limitAudioMeterHighLevel-select-container"></div>
+                        <span>dBFS</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Bus meter low level</label></td>
+                    <td colspan="2">
+                      <div class="align-vertical">
+                        <div id="limitAudioMeterLowLevel-select-container"></div>
+                        <span>dBFS</span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="text-nope-table">nope</div></td>
+                  </tr>
+                  <tr>
+                    <td>limitAudioMeterDisplayMode bool</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="limitAudioMeterLUFS-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="limitAudioMeterLoudnessScale-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="limitAudioMeterAlignLevel-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="limitAudioMeterHighLevel-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="limitAudioMeterLowLevel-value-container"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="spacer-footer"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

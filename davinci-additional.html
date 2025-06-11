@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="github" content="https://github.com/akarcode/" />
+    <meta name="repository" content="https://github.com/akarcode/DaVinciResolveProjectSettings/" />
+    <title>DaVinci Resolve v20 Project Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script src="dropdown-data-color.js"></script>
+    <script src="dropdown-data-main.js"></script>
+    <script src="dropdown-script.js"></script>
+  </head>
+  <body>
+    <div class="title-header">DaVinci Resolve v20 Project Settings - Sripting API References</div>
+    <div class="main-container">
+      <div class="navigation" id="navigation">
+        <script src="navigation.js"></script>
+      </div>
+      <div class="content-container">
+        <div class="settings-container">
+          <div class="parameter-title">Speaker Detection</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p>To Enable Speaker Detection for Transcriptions:</p>
+                      <ul>
+                        <li>
+                          v20: Right-click on a clip or timeline and select AI Tools &gt; Audio Transcription &gt; Use
+                          Speaker Detection.
+                        </li>
+                        <li>
+                          v19: Right-click on a clip or timeline and select Audio Transcription &gt; Speaker Detection.
+                        </li>
+                        <li>Or select Speaker Detection from the Transcription window's Option menu.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>speakerDetection bool</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="settings-container">
+          <div class="parameter-title">Playback Menu Settings</div>
+          <div class="parameter-container">
+            <div class="parameter-davinci gui">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="align-right"><label>Playback &gt;</label></td>
+                    <td colspan="2">
+                      <div class="mock-checkbox"></div>
+                      <span>Use Optimized Media if Available</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Playback &gt; Proxy Handling &gt;</label></td>
+                    <td colspan="2">
+                      <div id="perfProxyMediaMode-select-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Playback &gt; Timeline Playback Resolution &gt;</label></td>
+                    <td colspan="2">
+                      <div id="perfProxyResolutionRatio-select-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-right"><label>Playback &gt; Render Cache &gt;</label></td>
+                    <td colspan="2">
+                      <div id="perfRenderCacheMode-select-container"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="parameter-davinci script">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>perfOptimisedMediaOn bool</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="perfProxyMediaMode-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="perfProxyResolutionRatio-value-container"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="perfRenderCacheMode-value-container"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-container">
+          <div class="spacer-footer"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
