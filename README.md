@@ -10,7 +10,7 @@ I also went through the process of creating all the dropdown lists. This was mos
 
 **Use this as a guide, not gospel.**
 
-A hosted version is available here: [akar.id/resolve]([https://pages.github.com/](https://akar.id/resolve/))
+A hosted version is available here: [akar.id/resolve](https://akar.id/resolve/)
 
 ### Additional notes
 
